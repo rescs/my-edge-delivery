@@ -38,7 +38,7 @@ function showSlide(block, slideIndex = 0) {
   });
 }
 
-function startAutoSlide(block, interval = 5000) {
+function startAutoSlide(block, interval = 3000) {
   if (block.dataset.autoSlideInterval) clearInterval(parseInt(block.dataset.autoSlideInterval, 10));
   const slides = block.querySelectorAll('.carousel-slide');
   const autoSlide = () => {
@@ -161,3 +161,4 @@ export default async function decorate(block) {
     startAutoSlide(block, 5000); // Start auto-sliding with 5-second interval
   }
 }
+
